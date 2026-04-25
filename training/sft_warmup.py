@@ -7,9 +7,10 @@ so it understands the expected JSON structure before RL.
 import os
 import json
 import torch
+import argparse
 from datasets import Dataset
-from trl import SFTTrainer, SFTConfig
 from unsloth import FastLanguageModel
+from trl import SFTTrainer, SFTConfig
 from training.prompts import EXTRACTOR_SYSTEM_PROMPT
 
 def create_sft_dataset(corpus_path: str = "data/corpus.json") -> Dataset:
@@ -84,10 +85,18 @@ def run_sft_warmup(model_name: str = "unsloth/Qwen2.5-1.5B-Instruct", output_dir
     trainer.train()
     model.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
+    # Save trainer logs for “evidence you trained”
+    try:
+        with open(os.path.join(output_dir, "trainer_log_history.json"), "w", encoding="utf-8") as f:
+            json.dump(trainer.state.log_history, f, indent=2)
+    except Exception:
+        pass
     print(f"SFT Warmup complete. Model saved to {output_dir}")
 
 if __name__ == "__main__":
-    # Ensure checkpoints directory exists
-    os.makedirs("checkpoints/sft_warmup", exist_ok=True)
-    # We don't run it by default on standard execution unless explicitly called
-    print("SFT Warmup script ready. Execute `run_sft_warmup()` to begin.")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model_name", default="unsloth/Qwen2.5-1.5B-Instruct")
+    parser.add_argument("--output_dir", default="checkpoints/sft_warmup")
+    args = parser.parse_args()
+    os.makedirs(args.output_dir, exist_ok=True)
+    run_sft_warmup(model_name=args.model_name, output_dir=args.output_dir)

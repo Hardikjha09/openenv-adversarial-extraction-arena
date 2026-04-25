@@ -45,14 +45,19 @@ adversarial-extraction-arena/
    ```bash
    PYTHONPATH=. python env/server.py
    ```
-4. Run SFT Warmup and GRPO Training:
+4. Run training (real):
    ```bash
-   PYTHONPATH=. python training/train_grpo.py
+   # SFT warmup (recommended first run)
+   PYTHONPATH=. python training/train_grpo.py --run_sft
+
+   # Optional: GRPO after SFT
+   PYTHONPATH=. python training/train_grpo.py --run_sft --run_grpo
    ```
-5. Run Evaluation:
+5. Run Evaluation (real model):
    ```bash
-   PYTHONPATH=. python evaluation/run_eval.py
+   PYTHONPATH=. python evaluation/run_eval.py --model_path checkpoints/sft_warmup --num_episodes 100
    PYTHONPATH=. python plots/generate_plots.py
+   PYTHONPATH=. python plots/generate_training_plots.py
    ```
 6. Run Gradio Demo:
    ```bash
@@ -64,3 +69,11 @@ Run the environment and demo concurrently:
 ```bash
 docker-compose up --build
 ```
+
+## Hugging Face Space
+
+- **Space (runnable)**: `https://huggingface.co/spaces/HardikJha/extraction-arena`
+
+## Colab (judges can re-run)
+
+- Notebook: `notebooks/Train_Extractor_Colab.ipynb`

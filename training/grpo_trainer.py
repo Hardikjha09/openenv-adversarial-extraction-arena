@@ -6,10 +6,11 @@ import os
 import json
 import torch
 import random
+import argparse
 from typing import List, Dict, Any
 from datasets import Dataset
-from trl import GRPOConfig, GRPOTrainer
 from unsloth import FastLanguageModel, PatchFastRL
+from trl import GRPOConfig, GRPOTrainer
 from openenv.core.env_server import create_fastapi_app
 from env.extraction_env import AdversarialExtractionEnv, EnvAction
 from training.prompts import EXTRACTOR_SYSTEM_PROMPT
@@ -128,8 +129,18 @@ def run_grpo_training(
     trainer.train()
     model.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
+    # Save trainer logs for “evidence you trained”
+    try:
+        with open(os.path.join(output_dir, "trainer_log_history.json"), "w", encoding="utf-8") as f:
+            json.dump(trainer.state.log_history, f, indent=2)
+    except Exception:
+        pass
     print(f"GRPO Training complete. Model saved to {output_dir}")
 
 if __name__ == "__main__":
-    os.makedirs("checkpoints/grpo_extractor", exist_ok=True)
-    print("GRPO Trainer script ready. Execute `run_grpo_training()` to begin.")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model_name", default="checkpoints/sft_warmup")
+    parser.add_argument("--output_dir", default="checkpoints/grpo_extractor")
+    args = parser.parse_args()
+    os.makedirs(args.output_dir, exist_ok=True)
+    run_grpo_training(model_name=args.model_name, output_dir=args.output_dir)
