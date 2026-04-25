@@ -1,0 +1,36 @@
+# OpenEnv + Training
+openenv-core>=0.1.0
+trl>=0.8.0
+unsloth>=2024.12
+transformers>=4.45.0
+torch>=2.1.0
+peft>=0.10.0
+accelerate>=0.27.0
+bitsandbytes>=0.43.0
+vllm>=0.4.0
+
+# Data + Grading
+faker>=22.0.0
+rapidfuzz>=3.6.0
+python-dateutil>=2.9.0
+datasets>=2.17.0
+
+# Environment server
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+websockets>=12.0
+pydantic>=2.0.0
+
+# Logging + Evaluation
+wandb>=0.16.0
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+
+# Plotting
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Demo
+gradio>=4.20.0
+python-dotenv>=1.0.0

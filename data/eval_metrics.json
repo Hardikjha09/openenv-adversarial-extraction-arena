@@ -1,0 +1,802 @@
+[
+  {
+    "episode": 0,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.5,
+    "extractor_elo": 1184.0,
+    "adversary_elo": 1216.0,
+    "edits_applied": 0
+  },
+  {
+    "episode": 1,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1169.4695015289756,
+    "adversary_elo": 1230.5304984710244,
+    "edits_applied": 0
+  },
+  {
+    "episode": 2,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1156.252866366389,
+    "adversary_elo": 1243.747133633611,
+    "edits_applied": 0
+  },
+  {
+    "episode": 3,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1144.1990573710023,
+    "adversary_elo": 1255.8009426289977,
+    "edits_applied": 0
+  },
+  {
+    "episode": 4,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1133.1687543796,
+    "adversary_elo": 1266.8312456204,
+    "edits_applied": 0
+  },
+  {
+    "episode": 5,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1123.0374294577985,
+    "adversary_elo": 1276.9625705422015,
+    "edits_applied": 1
+  },
+  {
+    "episode": 6,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1113.6959037914467,
+    "adversary_elo": 1286.3040962085533,
+    "edits_applied": 1
+  },
+  {
+    "episode": 7,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1105.049532366863,
+    "adversary_elo": 1294.950467633137,
+    "edits_applied": 0
+  },
+  {
+    "episode": 8,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1097.016759966111,
+    "adversary_elo": 1302.983240033889,
+    "edits_applied": 0
+  },
+  {
+    "episode": 9,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1089.527482596379,
+    "adversary_elo": 1310.472517403621,
+    "edits_applied": 0
+  },
+  {
+    "episode": 10,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1082.5214442230742,
+    "adversary_elo": 1317.4785557769258,
+    "edits_applied": 0
+  },
+  {
+    "episode": 11,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1075.946775904531,
+    "adversary_elo": 1324.053224095469,
+    "edits_applied": 0
+  },
+  {
+    "episode": 12,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1069.7587157846353,
+    "adversary_elo": 1330.2412842153647,
+    "edits_applied": 1
+  },
+  {
+    "episode": 13,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1063.918512725068,
+    "adversary_elo": 1336.081487274932,
+    "edits_applied": 0
+  },
+  {
+    "episode": 14,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1058.392499592162,
+    "adversary_elo": 1341.607500407838,
+    "edits_applied": 0
+  },
+  {
+    "episode": 15,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1053.1513157470686,
+    "adversary_elo": 1346.8486842529314,
+    "edits_applied": 0
+  },
+  {
+    "episode": 16,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1048.169257121525,
+    "adversary_elo": 1351.830742878475,
+    "edits_applied": 1
+  },
+  {
+    "episode": 17,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1043.4237336047115,
+    "adversary_elo": 1356.5762663952885,
+    "edits_applied": 0
+  },
+  {
+    "episode": 18,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1038.8948158212902,
+    "adversary_elo": 1361.1051841787098,
+    "edits_applied": 1
+  },
+  {
+    "episode": 19,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1034.5648559791382,
+    "adversary_elo": 1365.4351440208618,
+    "edits_applied": 1
+  },
+  {
+    "episode": 20,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1030.4181699412484,
+    "adversary_elo": 1369.5818300587516,
+    "edits_applied": 1
+  },
+  {
+    "episode": 21,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1026.440769877527,
+    "adversary_elo": 1373.559230122473,
+    "edits_applied": 0
+  },
+  {
+    "episode": 22,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1022.6201387359781,
+    "adversary_elo": 1377.3798612640219,
+    "edits_applied": 1
+  },
+  {
+    "episode": 23,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1018.9450393489806,
+    "adversary_elo": 1381.0549606510194,
+    "edits_applied": 0
+  },
+  {
+    "episode": 24,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1015.4053522913782,
+    "adversary_elo": 1384.5946477086218,
+    "edits_applied": 0
+  },
+  {
+    "episode": 25,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1011.9919376722353,
+    "adversary_elo": 1388.0080623277647,
+    "edits_applied": 0
+  },
+  {
+    "episode": 26,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1008.6965169100662,
+    "adversary_elo": 1391.303483089934,
+    "edits_applied": 1
+  },
+  {
+    "episode": 27,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1005.5115712470476,
+    "adversary_elo": 1394.4884287529526,
+    "edits_applied": 0
+  },
+  {
+    "episode": 28,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 1002.43025433112,
+    "adversary_elo": 1397.5697456688802,
+    "edits_applied": 0
+  },
+  {
+    "episode": 29,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 999.4463166610365,
+    "adversary_elo": 1400.5536833389638,
+    "edits_applied": 0
+  },
+  {
+    "episode": 30,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 996.5540400688917,
+    "adversary_elo": 1403.4459599311085,
+    "edits_applied": 1
+  },
+  {
+    "episode": 31,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 993.7481807241646,
+    "adversary_elo": 1406.2518192758355,
+    "edits_applied": 0
+  },
+  {
+    "episode": 32,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 991.0239193963366,
+    "adversary_elo": 1408.9760806036634,
+    "edits_applied": 0
+  },
+  {
+    "episode": 33,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 988.3768179205488,
+    "adversary_elo": 1411.6231820794512,
+    "edits_applied": 1
+  },
+  {
+    "episode": 34,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 985.802780981243,
+    "adversary_elo": 1414.197219018757,
+    "edits_applied": 1
+  },
+  {
+    "episode": 35,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 983.2980224692853,
+    "adversary_elo": 1416.7019775307147,
+    "edits_applied": 1
+  },
+  {
+    "episode": 36,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 980.8590357842977,
+    "adversary_elo": 1419.1409642157023,
+    "edits_applied": 0
+  },
+  {
+    "episode": 37,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 978.4825675503376,
+    "adversary_elo": 1421.5174324496625,
+    "edits_applied": 0
+  },
+  {
+    "episode": 38,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 976.1655942932874,
+    "adversary_elo": 1423.8344057067127,
+    "edits_applied": 1
+  },
+  {
+    "episode": 39,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 973.905301695273,
+    "adversary_elo": 1426.094698304727,
+    "edits_applied": 1
+  },
+  {
+    "episode": 40,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 971.6990660974905,
+    "adversary_elo": 1428.3009339025095,
+    "edits_applied": 0
+  },
+  {
+    "episode": 41,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 969.5444379698948,
+    "adversary_elo": 1430.455562030105,
+    "edits_applied": 0
+  },
+  {
+    "episode": 42,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 967.4391271058566,
+    "adversary_elo": 1432.5608728941434,
+    "edits_applied": 0
+  },
+  {
+    "episode": 43,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 965.380989333385,
+    "adversary_elo": 1434.6190106666152,
+    "edits_applied": 1
+  },
+  {
+    "episode": 44,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 963.3680145628941,
+    "adversary_elo": 1436.6319854371059,
+    "edits_applied": 1
+  },
+  {
+    "episode": 45,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 961.3983160155965,
+    "adversary_elo": 1438.6016839844035,
+    "edits_applied": 0
+  },
+  {
+    "episode": 46,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 959.4701204971408,
+    "adversary_elo": 1440.529879502859,
+    "edits_applied": 0
+  },
+  {
+    "episode": 47,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 957.5817595986604,
+    "adversary_elo": 1442.4182404013395,
+    "edits_applied": 0
+  },
+  {
+    "episode": 48,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 955.7316617224171,
+    "adversary_elo": 1444.2683382775826,
+    "edits_applied": 0
+  },
+  {
+    "episode": 49,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 953.9183448421289,
+    "adversary_elo": 1446.081655157871,
+    "edits_applied": 1
+  },
+  {
+    "episode": 50,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 952.1404099191716,
+    "adversary_elo": 1447.8595900808282,
+    "edits_applied": 1
+  },
+  {
+    "episode": 51,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 950.3965349054289,
+    "adversary_elo": 1449.6034650945708,
+    "edits_applied": 0
+  },
+  {
+    "episode": 52,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 948.685469271849,
+    "adversary_elo": 1451.3145307281507,
+    "edits_applied": 1
+  },
+  {
+    "episode": 53,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 947.0060290089513,
+    "adversary_elo": 1452.9939709910484,
+    "edits_applied": 0
+  },
+  {
+    "episode": 54,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 945.3570920517693,
+    "adversary_elo": 1454.6429079482302,
+    "edits_applied": 1
+  },
+  {
+    "episode": 55,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 943.737594087149,
+    "adversary_elo": 1456.2624059128507,
+    "edits_applied": 0
+  },
+  {
+    "episode": 56,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 942.146524706064,
+    "adversary_elo": 1457.8534752939356,
+    "edits_applied": 0
+  },
+  {
+    "episode": 57,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 940.5829238677596,
+    "adversary_elo": 1459.41707613224,
+    "edits_applied": 0
+  },
+  {
+    "episode": 58,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 939.0458786461639,
+    "adversary_elo": 1460.9541213538357,
+    "edits_applied": 0
+  },
+  {
+    "episode": 59,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 937.5345202322019,
+    "adversary_elo": 1462.465479767798,
+    "edits_applied": 1
+  },
+  {
+    "episode": 60,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 936.0480211684466,
+    "adversary_elo": 1463.951978831553,
+    "edits_applied": 1
+  },
+  {
+    "episode": 61,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 934.585592795019,
+    "adversary_elo": 1465.4144072049808,
+    "edits_applied": 0
+  },
+  {
+    "episode": 62,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 933.1464828878269,
+    "adversary_elo": 1466.853517112173,
+    "edits_applied": 0
+  },
+  {
+    "episode": 63,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 931.7299734721649,
+    "adversary_elo": 1468.270026527835,
+    "edits_applied": 0
+  },
+  {
+    "episode": 64,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 930.335378796408,
+    "adversary_elo": 1469.6646212035919,
+    "edits_applied": 0
+  },
+  {
+    "episode": 65,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 928.9620434520457,
+    "adversary_elo": 1471.037956547954,
+    "edits_applied": 0
+  },
+  {
+    "episode": 66,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 927.6093406276557,
+    "adversary_elo": 1472.390659372344,
+    "edits_applied": 1
+  },
+  {
+    "episode": 67,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 926.2766704856136,
+    "adversary_elo": 1473.7233295143863,
+    "edits_applied": 1
+  },
+  {
+    "episode": 68,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 924.9634586514076,
+    "adversary_elo": 1475.0365413485924,
+    "edits_applied": 1
+  },
+  {
+    "episode": 69,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 923.6691548063811,
+    "adversary_elo": 1476.3308451936189,
+    "edits_applied": 0
+  },
+  {
+    "episode": 70,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 922.3932313755844,
+    "adversary_elo": 1477.6067686244157,
+    "edits_applied": 1
+  },
+  {
+    "episode": 71,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 921.1351823031758,
+    "adversary_elo": 1478.8648176968243,
+    "edits_applied": 0
+  },
+  {
+    "episode": 72,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 919.8945219085081,
+    "adversary_elo": 1480.105478091492,
+    "edits_applied": 0
+  },
+  {
+    "episode": 73,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 918.6707838166437,
+    "adversary_elo": 1481.3292161833563,
+    "edits_applied": 0
+  },
+  {
+    "episode": 74,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 917.4635199576037,
+    "adversary_elo": 1482.5364800423963,
+    "edits_applied": 0
+  },
+  {
+    "episode": 75,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 916.2722996291502,
+    "adversary_elo": 1483.7277003708498,
+    "edits_applied": 0
+  },
+  {
+    "episode": 76,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 915.096708618356,
+    "adversary_elo": 1484.903291381644,
+    "edits_applied": 1
+  },
+  {
+    "episode": 77,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 913.9363483776176,
+    "adversary_elo": 1486.0636516223824,
+    "edits_applied": 0
+  },
+  {
+    "episode": 78,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 912.7908352511389,
+    "adversary_elo": 1487.2091647488612,
+    "edits_applied": 1
+  },
+  {
+    "episode": 79,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 911.6597997482429,
+    "adversary_elo": 1488.340200251757,
+    "edits_applied": 0
+  },
+  {
+    "episode": 80,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 910.5428858601717,
+    "adversary_elo": 1489.4571141398283,
+    "edits_applied": 0
+  },
+  {
+    "episode": 81,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 909.4397504173062,
+    "adversary_elo": 1490.5602495826938,
+    "edits_applied": 1
+  },
+  {
+    "episode": 82,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 908.3500624839869,
+    "adversary_elo": 1491.649937516013,
+    "edits_applied": 0
+  },
+  {
+    "episode": 83,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 907.2735027883432,
+    "adversary_elo": 1492.7264972116568,
+    "edits_applied": 1
+  },
+  {
+    "episode": 84,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 906.2097631847404,
+    "adversary_elo": 1493.7902368152595,
+    "edits_applied": 0
+  },
+  {
+    "episode": 85,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 905.1585461466454,
+    "adversary_elo": 1494.8414538533546,
+    "edits_applied": 1
+  },
+  {
+    "episode": 86,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 904.1195642878787,
+    "adversary_elo": 1495.8804357121212,
+    "edits_applied": 0
+  },
+  {
+    "episode": 87,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 903.0925399103778,
+    "adversary_elo": 1496.907460089622,
+    "edits_applied": 0
+  },
+  {
+    "episode": 88,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 902.07720457674,
+    "adversary_elo": 1497.9227954232597,
+    "edits_applied": 0
+  },
+  {
+    "episode": 89,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 901.0732987059399,
+    "adversary_elo": 1498.9267012940597,
+    "edits_applied": 1
+  },
+  {
+    "episode": 90,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 900.0805711907396,
+    "adversary_elo": 1499.91942880926,
+    "edits_applied": 1
+  },
+  {
+    "episode": 91,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 899.0987790354162,
+    "adversary_elo": 1500.9012209645832,
+    "edits_applied": 1
+  },
+  {
+    "episode": 92,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 898.1276870125314,
+    "adversary_elo": 1501.8723129874681,
+    "edits_applied": 1
+  },
+  {
+    "episode": 93,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 897.167067337562,
+    "adversary_elo": 1502.8329326624375,
+    "edits_applied": 0
+  },
+  {
+    "episode": 94,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 896.2166993602922,
+    "adversary_elo": 1503.7833006397072,
+    "edits_applied": 0
+  },
+  {
+    "episode": 95,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 895.2763692719469,
+    "adversary_elo": 1504.7236307280525,
+    "edits_applied": 0
+  },
+  {
+    "episode": 96,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 894.3458698271176,
+    "adversary_elo": 1505.6541301728819,
+    "edits_applied": 0
+  },
+  {
+    "episode": 97,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 893.4250000795969,
+    "adversary_elo": 1506.5749999204027,
+    "edits_applied": 1
+  },
+  {
+    "episode": 98,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 892.5135651312996,
+    "adversary_elo": 1507.4864348687,
+    "edits_applied": 1
+  },
+  {
+    "episode": 99,
+    "extractor_reward": 0.0,
+    "adversary_reward": 0.0,
+    "extractor_elo": 891.6113758935032,
+    "adversary_elo": 1508.3886241064963,
+    "edits_applied": 0
+  }
+]

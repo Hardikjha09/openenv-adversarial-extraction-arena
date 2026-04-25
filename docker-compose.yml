@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  arena-env:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=.
+      - ENABLE_WEB_INTERFACE=false
+    volumes:
+      - ./data:/app/data
+      - ./checkpoints:/app/checkpoints
+      - ./plots:/app/plots
+
+  demo-app:
+    build: .
+    command: python demo/app.py
+    ports:
+      - "7860:7860"
+    environment:
+      - PYTHONPATH=.
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - arena-env

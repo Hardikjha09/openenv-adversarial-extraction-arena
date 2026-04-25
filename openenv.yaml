@@ -1,0 +1,21 @@
+name: "Adversarial Structured-Extraction Arena"
+description: "A two-agent OpenEnv reinforcement learning environment where Agent E extracts structured data and Agent A perturbs the document to break the extractor."
+version: "1.0.0"
+
+environment:
+  base_class: "AdversarialExtractionEnv"
+  file_path: "env/extraction_env.py"
+
+agents:
+  extractor:
+    action_schema: "ExtractorAction"
+    observation_schema: "ExtractionObservation"
+    models: ["Qwen2.5-1.5B-Instruct"]
+  adversary:
+    action_schema: "AdversaryAction"
+    observation_schema: "AdversaryObservation"
+    models: ["Qwen2.5-1.5B-Instruct"]
+
+training:
+  algorithm: "GRPO"
+  framework: "TRL+Unsloth"
