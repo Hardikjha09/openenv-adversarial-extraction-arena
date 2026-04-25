@@ -73,4 +73,9 @@ if __name__ == "__main__":
         output_path="plots/grpo_loss.png",
         title="GRPO Training (Logged Metric)",
     )
+    plot_training_loss(
+        log_path="checkpoints/sft_adversary/trainer_log_history.json",
+        output_path="plots/sft_adversary_loss.png",
+        title="Adversary SFT Warmup Training Loss",
+    )
 

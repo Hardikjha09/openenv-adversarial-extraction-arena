@@ -27,7 +27,8 @@ This model repo hosts the **SFT warmup LoRA adapter** trained for the OpenEnv pr
 - **GitHub repo**: https://github.com/Hardikjha09/openenv-adversarial-extraction-arena
 - **Runnable Space**: https://huggingface.co/spaces/HardikJha/extraction-arena
 - **Colab (re-run training)**: https://colab.research.google.com/github/Hardikjha09/openenv-adversarial-extraction-arena/blob/main/notebooks/Train_Extractor_Colab.ipynb
-- 
+- **Paired adversary LoRA**: https://huggingface.co/HardikJha/adversary-aea
+
 ## Evidence (plots + logs)
 
 - **Training loss**: https://huggingface.co/HardikJha/extractor-aea/blob/main/plots/sft_loss.png

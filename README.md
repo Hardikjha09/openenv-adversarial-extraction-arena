@@ -18,17 +18,25 @@ This repo is intentionally built **on OpenEnv** (see `openenv.yaml`) rather than
   - **Adversary (A)**: proposes `AdversaryAction(edits=[...])` executed by `env/adversary.py`.
 - **Scoring**: `env/rubric.py` + `grader/` implement fuzzy / typed scoring (not “exact string match only”).
 
+### Two trained policies (E + A)
+
+- **Extractor (E)**: `training/sft_warmup.py` → `checkpoints/sft_warmup` · Hub: [HardikJha/extractor-aea](https://huggingface.co/HardikJha/extractor-aea)
+- **Adversary (A)**: `training/sft_adversary.py` → `checkpoints/sft_adversary` · Hub: [HardikJha/adversary-aea](https://huggingface.co/HardikJha/adversary-aea) (create repo and upload; model card template: `artifacts/hf_adversary_model_README.md`)
+
+Eval loads **both** when you pass `--adversary_model_path`; otherwise the adversary falls back to a small random edit baseline.
+
 ## Hugging Face artifacts (judges: start here)
 
 ### Runnable Space (discoverable)
 
 - **Gradio Space**: https://huggingface.co/spaces/HardikJha/extraction-arena
 
-### Trained model + evidence (hosted on Hub)
+### Trained models + evidence (hosted on Hub)
 
-- **Model repo (LoRA / SFT warmup checkpoint)**: https://huggingface.co/HardikJha/extractor-aea
+- **Extractor LoRA**: https://huggingface.co/HardikJha/extractor-aea
+- **Adversary LoRA**: https://huggingface.co/HardikJha/adversary-aea
 
-**Evidence files (direct links):**
+**Evidence files (direct links, extractor repo):**
 
 - **Training loss plot**: https://huggingface.co/HardikJha/extractor-aea/blob/main/plots/sft_loss.png
 - **Eval reward plot**: https://huggingface.co/HardikJha/extractor-aea/blob/main/plots/rewards.png
@@ -47,8 +55,8 @@ What it does:
 - clones this repo
 - installs `requirements.txt`
 - generates `data/corpus.json` (not committed to git; large)
-- runs **real SFT warmup** via `training/sft_warmup.py`
-- generates `plots/sft_loss.png` via `plots/generate_training_plots.py`
+- runs **extractor SFT** via `training/sft_warmup.py` and **adversary SFT** via `training/sft_adversary.py`
+- generates `plots/sft_loss.png` and `plots/sft_adversary_loss.png` via `plots/generate_training_plots.py`
 
 ## Local reproduction (GPU recommended)
 
@@ -69,17 +77,20 @@ PYTHONPATH=. python data/generator.py
 3) Train (real):
 
 ```bash
-# SFT warmup (writes checkpoints/sft_warmup + trainer_log_history.json)
+# Extractor SFT (writes checkpoints/sft_warmup + trainer_log_history.json)
 PYTHONPATH=. python training/sft_warmup.py --model_name unsloth/Qwen2.5-1.5B-Instruct --output_dir checkpoints/sft_warmup
 
-# Optional next step (RL): GRPO trainer
+# Adversary SFT (writes checkpoints/sft_adversary + trainer_log_history.json)
+PYTHONPATH=. python training/sft_adversary.py --model_name unsloth/Qwen2.5-1.5B-Instruct --output_dir checkpoints/sft_adversary
+
+# Optional next step (RL): GRPO trainer (extractor)
 PYTHONPATH=. python training/grpo_trainer.py --model_name checkpoints/sft_warmup --output_dir checkpoints/grpo_extractor
 ```
 
-4) Evaluate with the trained checkpoint (real inference loop):
+4) Evaluate with trained checkpoints (real inference loop):
 
 ```bash
-PYTHONPATH=. python evaluation/run_eval.py --model_path checkpoints/sft_warmup --num_episodes 100
+PYTHONPATH=. python evaluation/run_eval.py --model_path checkpoints/sft_warmup --adversary_model_path checkpoints/sft_adversary --num_episodes 100
 PYTHONPATH=. python plots/generate_plots.py
 PYTHONPATH=. python plots/generate_training_plots.py
 ```
