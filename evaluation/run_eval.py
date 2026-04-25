@@ -85,7 +85,12 @@ def _run_extractor(model, tokenizer, device: str, document_text: str, schema: Di
     return _extract_json_from_text(decoded)
 
 
-def simulate_eval_run(num_episodes: int = 100, model_path: Optional[str] = None, max_new_tokens: int = 512):
+def simulate_eval_run(
+    num_episodes: int = 100,
+    model_path: Optional[str] = None,
+    max_new_tokens: int = 512,
+    save_every: int = 5,
+):
     print(f"Running Evaluation Harness over {num_episodes} episodes...")
     env = AdversarialExtractionEnv(split="holdout")
     elo = EloRater()
@@ -98,6 +103,7 @@ def simulate_eval_run(num_episodes: int = 100, model_path: Optional[str] = None,
         model, tokenizer, device = _load_extractor(model_path)
     
     for i in range(num_episodes):
+        t0 = time.time()
         obs = env.reset()
         # Mock Adversary Action (Random policy baseline)
         if random.random() < 0.5:
@@ -136,10 +142,18 @@ def simulate_eval_run(num_episodes: int = 100, model_path: Optional[str] = None,
             "adversary_elo": adv_elo,
             "edits_applied": len(env.state.applied_edits)
         })
-        
-    os.makedirs("data", exist_ok=True)
-    with open("data/eval_metrics.json", "w") as f:
-        json.dump(results, f, indent=2)
+
+        # Incremental save + progress so runs don't look stuck
+        if (i + 1) % save_every == 0 or (i + 1) == num_episodes:
+            os.makedirs("data", exist_ok=True)
+            with open("data/eval_metrics.json", "w", encoding="utf-8") as f:
+                json.dump(results, f, indent=2)
+            dt = time.time() - t0
+            print(
+                f"[{i+1}/{num_episodes}] ext_reward={ext_reward:.3f} adv_reward={adv_reward:.3f} "
+                f"ext_elo={ext_elo:.1f} adv_elo={adv_elo:.1f} step_time={dt:.1f}s",
+                flush=True,
+            )
         
     print(f"Evaluation complete. Extractor Elo: {ext_elo:.1f}, Adversary Elo: {adv_elo:.1f}")
     print("Metrics saved to data/eval_metrics.json")
@@ -149,5 +163,11 @@ if __name__ == "__main__":
     parser.add_argument("--num_episodes", type=int, default=100)
     parser.add_argument("--model_path", type=str, default=None, help="Path to trained extractor checkpoint (e.g. checkpoints/sft_warmup)")
     parser.add_argument("--max_new_tokens", type=int, default=512)
+    parser.add_argument("--save_every", type=int, default=5)
     args = parser.parse_args()
-    simulate_eval_run(num_episodes=args.num_episodes, model_path=args.model_path, max_new_tokens=args.max_new_tokens)
+    simulate_eval_run(
+        num_episodes=args.num_episodes,
+        model_path=args.model_path,
+        max_new_tokens=args.max_new_tokens,
+        save_every=args.save_every,
+    )
