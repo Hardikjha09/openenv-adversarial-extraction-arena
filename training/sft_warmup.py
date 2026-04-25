@@ -26,12 +26,10 @@ def create_sft_dataset(corpus_path: str = "data/corpus.json") -> Dataset:
         )
         
         response = f"```json\n{json.dumps(doc['gold'], indent=2)}\n```"
-        
-        messages = [
-            {"role": "user", "content": prompt},
-            {"role": "assistant", "content": response}
-        ]
-        data.append({"messages": messages})
+        # Unsloth's SFTTrainer wrapper expects a formatting_func; simplest is to
+        # pre-render a single text field containing both prompt and response.
+        text = f"{prompt}\n\n{response}"
+        data.append({"text": text})
         
     return Dataset.from_list(data)
 
@@ -60,7 +58,8 @@ def run_sft_warmup(model_name: str = "unsloth/Qwen2.5-1.5B-Instruct", output_dir
         model=model,
         tokenizer=tokenizer,
         train_dataset=dataset,
-        dataset_text_field="messages",
+        dataset_text_field="text",
+        formatting_func=lambda x: x["text"],
         max_seq_length=max_seq_length,
         dataset_num_proc=2,
         packing=False,
