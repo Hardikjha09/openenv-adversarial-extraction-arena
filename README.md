@@ -144,5 +144,6 @@ adversarial-extraction-arena/
 
 ## Additional writeups
 
-- **Project blog (markdown)**: `blog/hf_blog.md`
+- **Hackathon blog (markdown, in repo)**: [blog/hf_blog.md](https://github.com/Hardikjha09/openenv-adversarial-extraction-arena/blob/main/blog/hf_blog.md)
+- **Same blog on the Space (for form / judges)** — after you sync `hf_space/`: [BLOG.md on the Space](https://huggingface.co/spaces/HardikJha/extraction-arena/blob/main/BLOG.md) *(URL works once `hf_space/BLOG.md` is uploaded to the Hub)*
 
