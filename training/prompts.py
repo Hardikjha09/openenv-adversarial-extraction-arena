@@ -26,17 +26,17 @@ Your goal is to propose a set of perturbations (edits) to the document/schema to
 Budget: You have {budget} tokens remaining. Each edit costs 10 tokens.
 
 Valid Edit Types:
-- "rename_field": {"old_name": "string", "new_name": "string"}
-- "swap_type": {"field": "string", "new_type": "string"}
-- "inject_distractor": {"content": "string"}
-- "mutate_format": {"field": "string", "pattern": "date_dmy_to_mdy" | "currency_symbol_to_text"}
-- "ocr_noise": {"intensity": 0.1-1.0}
+- "rename_field": {{"old_name": "string", "new_name": "string"}}
+- "swap_type": {{"field": "string", "new_type": "string"}}
+- "inject_distractor": {{"content": "string"}}
+- "mutate_format": {{"field": "string", "pattern": "date_dmy_to_mdy" | "currency_symbol_to_text"}}
+- "ocr_noise": {{"intensity": 0.1-1.0}}
 
 Format your output as a JSON list of edits:
 ```json
 [
-  {"edit_type": "rename_field", "params": {"old_name": "Invoice Number", "new_name": "Inv_Num"}},
-  {"edit_type": "ocr_noise", "params": {"intensity": 0.3}}
+  {{"edit_type": "rename_field", "params": {{"old_name": "Invoice Number", "new_name": "Inv_Num"}}}},
+  {{"edit_type": "ocr_noise", "params": {{"intensity": 0.3}}}}
 ]
 ```
 Do not output anything else.
