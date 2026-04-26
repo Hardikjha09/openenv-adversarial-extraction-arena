@@ -21,7 +21,7 @@ This repo is intentionally built **on OpenEnv** (see `openenv.yaml`) rather than
 ### Two trained policies (E + A)
 
 - **Extractor (E)**: `training/sft_warmup.py` → `checkpoints/sft_warmup` · Hub: [HardikJha/extractor-aea](https://huggingface.co/HardikJha/extractor-aea)
-- **Adversary (A)**: `training/sft_adversary.py` → `checkpoints/sft_adversary` · Hub: [HardikJha/adversary-aea](https://huggingface.co/HardikJha/adversary-aea) (create repo and upload; model card template: `artifacts/hf_adversary_model_README.md`)
+- **Adversary (A)**: `training/sft_adversary.py` → `checkpoints/sft_adversary` · Hub: [HardikJha/adversary-aea](https://huggingface.co/HardikJha/adversary-aea) · model card source: `artifacts/hf_adversary_model_README.md`
 
 Eval loads **both** when you pass `--adversary_model_path`; otherwise the adversary falls back to a small random edit baseline.
 
@@ -36,13 +36,18 @@ Eval loads **both** when you pass `--adversary_model_path`; otherwise the advers
 - **Extractor LoRA**: https://huggingface.co/HardikJha/extractor-aea
 - **Adversary LoRA**: https://huggingface.co/HardikJha/adversary-aea
 
-**Evidence files (direct links, extractor repo):**
+**Evidence — extractor repo** ([HardikJha/extractor-aea](https://huggingface.co/HardikJha/extractor-aea)):
 
 - **Training loss plot**: https://huggingface.co/HardikJha/extractor-aea/blob/main/plots/sft_loss.png
 - **Eval reward plot**: https://huggingface.co/HardikJha/extractor-aea/blob/main/plots/rewards.png
 - **Eval Elo plot**: https://huggingface.co/HardikJha/extractor-aea/blob/main/plots/elo_ratings.png
 - **Eval metrics JSON**: https://huggingface.co/HardikJha/extractor-aea/blob/main/eval_metrics.json
 - **SFT trainer log (raw)**: https://huggingface.co/HardikJha/extractor-aea/blob/main/trainer_log_history.json
+
+**Evidence — adversary repo** ([HardikJha/adversary-aea](https://huggingface.co/HardikJha/adversary-aea)):
+
+- **Adversary SFT loss plot**: https://huggingface.co/HardikJha/adversary-aea/blob/main/plots/sft_adversary_loss.png
+- **Adversary SFT trainer log** (also inside uploaded adapter folder): https://huggingface.co/HardikJha/adversary-aea/blob/main/trainer_log_history.json
 
 ## Re-run training (Colab notebook)
 
@@ -133,7 +138,7 @@ adversarial-extraction-arena/
 ## Notes / gotchas
 
 - **`data/corpus.json` is not in git** (by design). You must generate it before training/eval.
-- **`checkpoints/` is not in git** (by design). Train in Colab or locally, then upload to HF if you want a public checkpoint.
+- **`checkpoints/` is gitignored** (by design). Public weights live on **Hugging Face**. To also mirror a small LoRA in this repo, use `git add -f checkpoints/sft_adversary/` (watch GitHub’s file-size limits; use HF for large files).
 - **Secrets**: never commit tokens. This repo `.gitignore` includes `.env`.
 
 ## Additional writeups

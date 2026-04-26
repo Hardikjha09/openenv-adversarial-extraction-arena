@@ -47,9 +47,10 @@ tok = AutoTokenizer.from_pretrained(path, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(path, trust_remote_code=True, device_map="auto")
 ```
 
-## Evidence
+## Evidence (this model repo)
 
-Upload `trainer_log_history.json` and `plots/sft_adversary_loss.png` from local/Colab training to this repo for judges.
+- **Training loss plot**: https://huggingface.co/HardikJha/adversary-aea/blob/main/plots/sft_adversary_loss.png
+- **SFT trainer log (raw)**: https://huggingface.co/HardikJha/adversary-aea/blob/main/trainer_log_history.json
 
 ## Citation
 
