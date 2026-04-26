@@ -7,6 +7,7 @@ Otherwise falls back to manual OCR perturbation and a placeholder extractor JSON
 
 import json
 import os
+import random
 
 import gradio as gr
 
@@ -66,6 +67,218 @@ def _fallback_docs():
                 "additionalProperties": False,
             },
         },
+        {
+            "text": (
+                "DELIVERY CHALLAN\n"
+                "DC No: DC-77821\n"
+                "Date: 18/04/2025\n"
+                "Ship From: Pune WH-02\n"
+                "Ship To: Neha Kapoor, Bengaluru 560001\n"
+                "LR Number: MH14AB9922\n"
+                "Items: LED Panels — Qty 24\n"
+                "Vehicle: MH 12 GH 4411\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "dc_number": {"type": "string"},
+                    "dc_date": {"type": "string"},
+                    "consignee_name": {"type": "string"},
+                    "consignee_city_pin": {"type": "string"},
+                    "lr_number": {"type": "string"},
+                    "quantity": {"type": "number"},
+                    "vehicle_reg": {"type": "string"},
+                },
+                "required": ["dc_number", "dc_date", "lr_number"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "text": (
+                "PURCHASE ORDER\n"
+                "PO Ref: PO-MUM-2025-0091\n"
+                "Vendor: Laxmi Steels\n"
+                "GSTIN Vendor: 27AABCL1234C1Z8\n"
+                "Delivery Site: Navi Mumbai Plant\n"
+                "Line Total: ₹ 3,88,920.00\n"
+                "IGST 18%: ₹ 70,005.60\n"
+                "Grand Total: ₹ 4,58,925.60\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "po_reference": {"type": "string"},
+                    "vendor_name": {"type": "string"},
+                    "vendor_gstin": {"type": "string"},
+                    "delivery_site": {"type": "string"},
+                    "line_total": {"type": "number"},
+                    "igst_amount": {"type": "number"},
+                    "grand_total": {"type": "number"},
+                },
+                "required": ["po_reference", "vendor_gstin", "grand_total"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "text": (
+                "RENT RECEIPT\n"
+                "Receipt No: RNT-4401\n"
+                "Landlord: Shri Venkatesh Iyer\n"
+                "Tenant: Arjun Mehta\n"
+                "Property: Flat 402, Tower B, Whitefield\n"
+                "Month: March 2025\n"
+                "Rent: ₹ 28,000\n"
+                "Mode: UPI ref 8877665544332211\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "receipt_number": {"type": "string"},
+                    "landlord": {"type": "string"},
+                    "tenant": {"type": "string"},
+                    "property_summary": {"type": "string"},
+                    "period_month": {"type": "string"},
+                    "rent_amount": {"type": "number"},
+                    "payment_ref": {"type": "string"},
+                },
+                "required": ["receipt_number", "tenant", "rent_amount"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "text": (
+                "SALARY SLIP — MARCH 2025\n"
+                "Employee: Kavya Nair\n"
+                "Employee ID: EMP-88331\n"
+                "PAN: ABCPN1234D\n"
+                "UAN: 101234567890\n"
+                "Basic: ₹ 65,000\n"
+                "HRA: ₹ 26,000\n"
+                "Deduction PF: ₹ 7,800\n"
+                "Net Pay: ₹ 92,400\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "employee_name": {"type": "string"},
+                    "employee_id": {"type": "string"},
+                    "pan": {"type": "string"},
+                    "uan": {"type": "string"},
+                    "basic_salary": {"type": "number"},
+                    "hra": {"type": "number"},
+                    "pf_deduction": {"type": "number"},
+                    "net_pay": {"type": "number"},
+                },
+                "required": ["employee_id", "pan", "net_pay"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "text": (
+                "ELECTRICITY BILL — BESCOM\n"
+                "Consumer: Sunita Rao\n"
+                "RR Number: RR-BLR-00998877\n"
+                "Billing Period: 15/02/2025 to 14/03/2025\n"
+                "Units Consumed: 412 kWh\n"
+                "Amount Payable: ₹ 3,842.00\n"
+                "Due Date: 05/04/2025\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "consumer_name": {"type": "string"},
+                    "rr_number": {"type": "string"},
+                    "billing_start": {"type": "string"},
+                    "billing_end": {"type": "string"},
+                    "units_kwh": {"type": "number"},
+                    "amount_payable": {"type": "number"},
+                    "due_date": {"type": "string"},
+                },
+                "required": ["rr_number", "units_kwh", "amount_payable"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "text": (
+                "MOTOR INSURANCE — RENEWAL QUOTE\n"
+                "Policy Type: Comprehensive\n"
+                "Insured: Rohit Desai\n"
+                "Vehicle: KA03MM7722 (Hyundai Creta)\n"
+                "IDV: ₹ 9,85,000\n"
+                "NCB: 35%\n"
+                "Premium: ₹ 14,260\n"
+                "Quote Valid Till: 30/04/2025\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "policy_type": {"type": "string"},
+                    "insured_name": {"type": "string"},
+                    "vehicle_reg": {"type": "string"},
+                    "vehicle_model": {"type": "string"},
+                    "idv": {"type": "number"},
+                    "ncb_percent": {"type": "number"},
+                    "premium": {"type": "number"},
+                    "quote_valid_until": {"type": "string"},
+                },
+                "required": ["insured_name", "vehicle_reg", "premium"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "text": (
+                "FIXED DEPOSIT ADVICE\n"
+                "Bank: ICICI Bank\n"
+                "FD Account: FD/882211003344\n"
+                "Customer: Meera Joshi\n"
+                "Principal: ₹ 5,00,000\n"
+                "Tenure: 390 days\n"
+                "Interest Rate: 7.25% p.a.\n"
+                "Maturity Value: ₹ 5,38,900 (approx)\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "bank_name": {"type": "string"},
+                    "fd_account": {"type": "string"},
+                    "customer_name": {"type": "string"},
+                    "principal": {"type": "number"},
+                    "tenure_days": {"type": "number"},
+                    "interest_rate_percent": {"type": "number"},
+                    "maturity_value": {"type": "number"},
+                },
+                "required": ["fd_account", "principal", "interest_rate_percent"],
+                "additionalProperties": False,
+            },
+        },
+        {
+            "text": (
+                "OUTPATIENT BILL\n"
+                "Hospital: Apollo Clinic Indiranagar\n"
+                "Patient: Vikram Singh\n"
+                "UHID: UHID-AP-992211\n"
+                "Visit Date: 22/03/2025\n"
+                "Consultation: ₹ 850\n"
+                "Lab Tests: ₹ 2,400\n"
+                "Pharmacy: ₹ 1,175\n"
+                "Total: ₹ 4,425\n"
+            ),
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "hospital_name": {"type": "string"},
+                    "patient_name": {"type": "string"},
+                    "uhid": {"type": "string"},
+                    "visit_date": {"type": "string"},
+                    "consultation_fee": {"type": "number"},
+                    "lab_charges": {"type": "number"},
+                    "pharmacy_charges": {"type": "number"},
+                    "total_amount": {"type": "number"},
+                },
+                "required": ["uhid", "visit_date", "total_amount"],
+                "additionalProperties": False,
+            },
+        },
     ]
     return docs
 
@@ -84,7 +297,6 @@ def _load_corpus_if_available():
 executor = AdversaryEditExecutor()
 corpus = _load_corpus_if_available()
 fallback_docs = _fallback_docs()
-fallback_idx = 0
 
 SPACE_USE_MODELS = os.environ.get("SPACE_USE_MODELS", "1") != "0"
 
@@ -96,13 +308,11 @@ def refresh_status():
 
 
 def load_random_doc():
-    global fallback_idx
     if corpus is not None:
         doc = corpus.sample()
         return doc["text"], json.dumps(doc["schema"], indent=2), refresh_status()
 
-    doc = fallback_docs[fallback_idx % len(fallback_docs)]
-    fallback_idx += 1
+    doc = random.choice(fallback_docs)
     return doc["text"], json.dumps(doc["schema"], indent=2), refresh_status()
 
 
