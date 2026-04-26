@@ -29,7 +29,8 @@ Eval loads **both** when you pass `--adversary_model_path`; otherwise the advers
 
 ### Runnable Space (discoverable)
 
-- **Gradio Space**: https://huggingface.co/spaces/HardikJha/extraction-arena
+- **Gradio Space**: https://huggingface.co/spaces/HardikJha/extraction-arena  
+  Enable **GPU** in the Space settings for live inference with the Hub LoRAs (`extractor-aea` / `adversary-aea`). On CPU, the UI falls back to manual OCR noise and a placeholder extractor.
 
 ### Trained models + evidence (hosted on Hub)
 

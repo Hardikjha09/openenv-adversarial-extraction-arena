@@ -36,12 +36,12 @@ This model repo hosts the **SFT warmup LoRA adapter** trained for the OpenEnv pr
 - **Eval Elo**: https://huggingface.co/HardikJha/extractor-aea/blob/main/plots/elo_ratings.png
 - **Eval metrics JSON**: https://huggingface.co/HardikJha/extractor-aea/blob/main/eval_metrics.json
 - **SFT trainer log (raw JSON)**: https://huggingface.co/HardikJha/extractor-aea/blob/main/trainer_log_history.json
-- 
+
 ## What this checkpoint is
 
 - **Base model**: `unsloth/Qwen2.5-1.5B-Instruct` (4-bit Unsloth bundle: `unsloth/qwen2.5-1.5b-instruct-unsloth-bnb-4bit`)
 - **Adapter**: LoRA (`peft`), saved from `training/sft_warmup.py`
-- 
+
 ## Quick start (load base + adapter)
 
 ```python

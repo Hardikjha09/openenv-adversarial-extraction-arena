@@ -17,5 +17,5 @@ agents:
     models: ["Qwen2.5-1.5B-Instruct"]
 
 training:
-  algorithm: "GRPO"
+  algorithm: "SFT warmup for extractor and adversary; optional GRPO for extractor (see training/)"
   framework: "TRL+Unsloth"
